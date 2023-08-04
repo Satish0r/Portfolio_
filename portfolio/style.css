@@ -1,3 +1,4 @@
+html{scroll-behavior: smooth;}
 body{background-color: whitesmoke;}
 .onedive{
     background-color:whitesmoke;
@@ -16,22 +17,20 @@ body{background-color: whitesmoke;}
    display:inline-block;
 
 }
-.main_nav ul {
+.main_nav ul{
     margin-left:300px;
     display:inline-block;
     text-align: center;
-    
-
 }
 
-ul li{
+.main_nav ul li{
     display:inline-block;
     text-align: center;
     text-decoration: underline;
 }
 
 a{
-    text-decoration: none;
+    text-decoration: underline;
     color:black;
 }
 
@@ -53,9 +52,10 @@ a{
 .about {
    padding-top:80px;
 }
-
-
-    
+.about_me{
+    display:flex;
+    justify-content: center;
+}
 .circleone{
     min-width: 100px;
     min-height: 50px;
@@ -68,7 +68,6 @@ a{
     cursor: pointer;
 }
 .circletwo{
-    
     min-width: 100px;
     min-height: 50px;
     background-color: rgb(148, 213, 17);
@@ -78,11 +77,16 @@ a{
     margin-right: 20px;
     background-color: rgb(236, 93, 10);
     cursor: pointer;}
+.about_me ul li{
+        display:inline-block;
+        text-align: center;
+        text-decoration: underline;
+    }
+
 .about_me ul :hover{
     transform: scale(1.2);
     text-decoration: none;
     transition-duration: 0.8s;
-
     transition-timing-function:ease;
 }
 .button{
@@ -101,10 +105,8 @@ a{
     margin-left:50px;
     line-height: 0px;
     background-color: whitesmoke;
-
 }
 .footer_div h4{
-    
 }
 footer{
     border-top:1px solid black;
@@ -125,22 +127,79 @@ footer{
     bottom:15%;
     left:80%;
 }
+.side-menu-button{
+    display:none;
+    
+
+}
 @media screen and (250px <= width <=1024px) {
     *{
-       
     }
     .onedive{
         width: 95vw;
         margin-top:2px;
     }
     .main_nav{
-        width: 80vw;
-        display:flex;
+        display: flex;
+        position: sticky;
+        top:0;
+        background-color: whitesmoke;
+        text-align: left;
+        justify-content: space-between;
     }
     .main_nav ul{
-        margin-left:20vw;
         display: none;
     }
+    
+    .side-menu-button{
+        display:inline-block;
+        position: relative;
+        margin-top: auto;
+        margin-bottom: auto;
+        background-size: cover;
+        width:40px;
+        height:40px;
+        cursor: pointer;
+    }
+
+    .side-manu{
+        display:none;
+        background-color: whitesmoke;
+        width:50vw;
+        position:absolute;
+        z-index: 0;
+        right:0;
+        height: 50vh;
+        top:20px;
+        position: fixed;
+        transition-duration: 1s;
+    }
+    .side-manu ul li{
+        display: none;
+        cursor: pointer;
+        display:block;
+        text-align: center;
+        font-size: 30px;
+        line-height: 100px;
+    }
+    .side-manu ul li:hover{
+        margin:25px;
+        border:1px solid black;
+        text-decoration: none;
+        transform: scale(1.2);
+        text-decoration: none;
+        transition-duration: 0.8s;
+        transition-timing-function:ease;
+    }
+    .sidebar-colse-button{
+        display:inline-block;
+        position: absolute;
+        margin-top: auto;
+        margin-bottom: auto;
+        background-size: cover;
+        width:40px;
+        height:40px;
+        cursor: pointer;}
     .profile-img{
         min-height:250px ;
         width: 250px;
