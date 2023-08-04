@@ -4,10 +4,11 @@ body{background-color: whitesmoke;}
     margin-left: auto;
     margin-right:auto;
     width:1024px;
+    margin-top: 50px;
 }
 .main_nav{
     text-align: center;
-    width:1024px;
+    max-width: 1024px;
     /* border:2px solid black; */
     box-shadow: none;
 }
@@ -95,11 +96,12 @@ a{
     transform: scale(1.3);
 }
 .footer_div{
-    margin-top:0px;
+    margin-top:10px;
     float: left;
     margin-left:50px;
     line-height: 0px;
     background-color: whitesmoke;
+
 }
 .footer_div h4{
     
@@ -113,7 +115,6 @@ footer{
     padding-top:0;
 }
 .chatbot_div{
-   
 }
 .chatbot{
     width:70px;
@@ -123,9 +124,40 @@ footer{
     position: fixed;
     bottom:15%;
     left:80%;
-    
-
-    
-   
 }
-
+@media screen and (250px <= width <=1024px) {
+    *{
+       
+    }
+    .onedive{
+        width: 95vw;
+        margin-top:2px;
+    }
+    .main_nav{
+        width: 80vw;
+        display:flex;
+    }
+    .main_nav ul{
+        margin-left:20vw;
+        display: none;
+    }
+    .profile-img{
+        min-height:250px ;
+        width: 250px;
+        border-radius: 200px;
+        margin: auto;
+        margin-top: 50px;
+    }
+    .about{
+        padding-top:10px;
+    }
+    .main_section{
+        display:flex;
+        flex-direction: column;
+        width: 90vw;
+        text-align: center;
+    }
+    footer{
+        margin-top:50px;
+    }
+}
