@@ -129,9 +129,9 @@ footer{
 }
 .side-menu-button{
     display:none;
-    
 
 }
+.side-manu{display:none;}
 @media screen and (250px <= width <=1024px) {
     *{
     }
